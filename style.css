@@ -1,0 +1,233 @@
+:root{
+  --border-soft: rgba(255,255,255,0.10);
+  --border-sub: rgba(255,255,255,0.16);
+}
+body {
+  background-image: url("./src/bg-light.svg");
+  background-size: 100vw auto;   /* full screen width */
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  color: #fff;
+  font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  height: 300vh;
+}
+.nav {
+  margin: 9px;
+  padding: 0 180px;
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 400;
+  
+  /* height: 60px; */
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: px;
+  /* border: 2px solid red; */
+  /* padding-left: 50px; */
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 10px;
+  /* border: 2px solid yellow; */
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+}
+.contact {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.10); /* more transparent border */
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.sales {
+  background: #fff;
+  backdrop-filter: blur(0px); /* blur behind the button */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #1d1d1d;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.primaryCta {
+  display: flex;
+  gap: 10px;
+  /* padding-right: 20px; */
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+.new {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.child {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px; /* Fully rounded ends */
+  
+  /* CRITICAL CHANGE HERE: */
+  /* Top/Bottom: 4px, Right: 20px, Left: 4px */
+  /* We use small left padding so the badge sits close to the start */
+  padding: 3px 12px 3px 3px; 
+  font-family: 'inter';
+  color: #fff;
+  width: fit-content;
+}
+.badge{
+    background-color: #0c8c5e;
+    padding: 2px 8px;
+    border-radius: 15px;
+    
+}
+.round {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #1d1d1d;
+}
+.headchild {
+  display: flex;
+  align-items: center; /* Vertically centers text and badge */
+  gap: 12px;           /* Space between Badge and Text */
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+    /* border: 2px solid red; */
+    
+}
+.mainchild{
+font-size: 53px;
+text-align: center;
+font-weight: 700;
+/* border: 2px solid yellow; */
+width: 500px;
+}
+.secondchild{
+    /* border: 2px solid pink; */
+    text-align: center;
+    font-size: 15px;
+    width: 420px;
+    padding: 20px 0px;
+}
+.thirdchild{
+    display: flex;
+    border: 2px solid blue;
+      background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.10); /* more transparent border */
+  color: #fff;
+  padding: 5px 5px;
+  border-radius: 999px;
+  cursor: pointer;
+  width: 350px;
+  /* border: 2px solid pink; */
+}
+.thirdchild input{
+     flex: 1; 
+            background: transparent;
+            border: none;
+            outline: none;
+            padding-left: 20px;
+            font-size: 16px;
+            color: white;
+}
+.thirdchild input::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+}
+.heroimage{
+    display: flex;
+    padding-top: 60px;
+    justify-content: center;
+    /* border: 2px solid blue; */
+}
+.imagechild img{
+  
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  border-radius: 30px; /* Fully rounded ends */
+}
+.bots{
+    padding-top: 20px;
+    display: grid;
+    /* border: 2px solid black; */
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(5,1fr);
+    align-items: center;
+    gap: 20px;
+    
+}
+.x, .coinbase ,.lovable,.paypal,.hubspot,.microsoft,.anthropic,.perplexity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anthropic{
+    grid-area: 1/3/3/4;
+}
+.coinbase{
+    grid-area: 1/4/3/5;
+}
+.microsoft{
+    grid-area: 1/5/3/6;
+}
+.perplexity{
+    grid-area: 1/6/3/7;
+}
+.hubspot{
+    grid-area: 3/3/5/4;
+}
+.x{
+    grid-area: 3/4/5/5;
+}
+.paypal{
+    grid-area: 3/5/5/6;
+}
+.lovable{
+    grid-area: 3/6/5/7;
+}
