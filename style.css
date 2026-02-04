@@ -3,15 +3,14 @@
   --border-sub: rgba(255,255,255,0.16);
 }
 body {
-  background-image: url("./src/bg-light.svg");
-  background-size: 100vw auto;   /* full screen width */
+  background-image: url("./src/bg-light-cropped.svg");
+  background-size: cover;   /* full screen width */
   background-repeat: no-repeat;
-  background-position: top center;
-
-  color: #fff;
+  background-position: center;
+  
   font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
-  height: 300vh;
+  min-height: 100vh;
 }
 .nav {
   margin: 9px;
@@ -20,10 +19,10 @@ body {
   /* border: 2px solid red; */
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5vh;
   font-size: 15px;
   font-weight: 400;
-  
+  color: #fff;
   /* height: 60px; */
 }
 
@@ -52,7 +51,7 @@ ul li {
 font-size: 15px;
   border: 1px solid rgba(255, 255, 255, 0.10); /* more transparent border */
   color: #fff;
-  padding: 5px 20px;
+  padding: 2px 15px;
   border-radius: 999px;
   cursor: pointer;
 }
@@ -101,7 +100,7 @@ font-size: 15px;
   /* Top/Bottom: 4px, Right: 20px, Left: 4px */
   /* We use small left padding so the badge sits close to the start */
   padding: 3px 12px 3px 3px; 
-  font-family: 'inter';
+  font-family: 'inter''Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   width: fit-content;
 }
@@ -135,6 +134,7 @@ font-size: 15px;
     gap: 10px;
     padding-top: 20px;
     /* border: 2px solid red; */
+    color: #fff;
     
 }
 .mainchild{
@@ -192,13 +192,13 @@ font-size: 15px;
   border-radius: 30px; /* Fully rounded ends */
 }
 .bots{
-    padding-top: 20px;
+    padding-top: 60px;
     display: grid;
     /* border: 2px solid black; */
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: repeat(5,1fr);
     align-items: center;
-    gap: 20px;
+    gap: 40px 100px;
     
 }
 .x, .coinbase ,.lovable,.paypal,.hubspot,.microsoft,.anthropic,.perplexity{
@@ -230,4 +230,23 @@ font-size: 15px;
 }
 .lovable{
     grid-area: 3/6/5/7;
+}
+.intel{
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  align-items: center;
+  ;
+}
+.intelchild1{
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+.intelchild2{
+   text-align: center;
+    font-size: 15px;
+    width: 320px;
+    padding: 20px 0px;
+    border: 2px solid red;
 }
