@@ -591,3 +591,128 @@ font-size: 17px;
   font-size: 17px;
   width: 620px;
   text-align: center;}
+
+.cardflex{
+  display: flex;
+  /* border: 2px solid red; */
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+/* make the immediate child (the 3-card wrapper) lay out the three cards left-to-right and centered */
+.cardflex > div{
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.imgcard1, .imgcard2, .imgcard3{
+  /* border: 2px solid blue ; */
+  border-radius: 20px;
+  position: relative;
+  width: 394px; /* fixed card width requested */
+  height: 290px; /* fixed card height requested */
+  overflow: hidden;
+}
+/* Apply story-card like overlays to the image area of each card */
+.imgcard1::before, .imgcard2::before, .imgcard3::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* sits above the image but below svg/text */
+  pointer-events: none;
+  /* Dark on the left, transparent to the right (softened) */
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+  transition: background 180ms ease, opacity 180ms ease;
+}
+
+.imgcard1:hover::before, .imgcard2:hover::before, .imgcard3:hover::before{
+  background: linear-gradient(to right, rgba(0,0,0,0.75) 35%, rgba(0,0,0,0) 100%);
+}
+
+/* Radial soft spot on hover (bottom-right) */
+.imgcard1::after, .imgcard2::after, .imgcard3::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  background: radial-gradient(circle at 85% 75%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 60%);
+}
+
+.imgcard1:hover::after, .imgcard2:hover::after, .imgcard3:hover::after{
+  opacity: 1;
+}
+.card1 img,.card2 img,.card3 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.firstcardsvg,.imgcard2 svg,.imgcard3 svg{
+  /* center this SVG inside .card1 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* true centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; 
+  pointer-events: none; /* don't block clicks on the card */
+}
+.card1,.card2,.card3{
+  /* border: 2px solid blue ; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* make the card container match the image wrapper width so text stays inside */
+  width: 394px;
+  box-sizing: border-box;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Hover effect for card1, card2, card3: subtle lift and shadow */
+/* Hover effects are applied to the image containers (.imgcard*) only. */
+
+.card1txt, .card2txt, .card3txt{
+  /* background-color: #0c8c5e; */
+  /* color: #ffffff; */
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+.card1read, .card2read, .card3read{
+  /* align the read link to the left start of the card */
+  align-self: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  text-align: left;
+  background-color: transparent; /* remove debug color */
+  
+  font-weight: 600;
+  
+}
+.card1read a , .card2read a, .card3read a{
+  color: #0c8c5e; /* brand green */
+  text-decoration: none;
+}
+
+/* Only image area should lift and cast a shadow on hover */
+.imgcard1, .imgcard2, .imgcard3{
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  transform-origin: center;
+}
+.imgcard1:hover, .imgcard2:hover, .imgcard3:hover{
+
+  box-shadow: 0 18px 30px rgba(0,0,0,0.18);
+  z-index: 6; /* bring image above neighbors while hovering */
+}
+
