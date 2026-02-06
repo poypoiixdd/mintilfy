@@ -393,6 +393,13 @@ font-size: 17px;
   cursor: pointer;
 
 }
+.explor{
+  color: #000; /* black */
+  text-decoration: none;
+}
+.explor:hover{
+  text-decoration: none;
+}
 .express{
     background-color: lab(2.42579% -.165291 -.470081/.03);
 
