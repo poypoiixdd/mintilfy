@@ -34,6 +34,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   color: #fff;
+  
   /* height: 60px; */
 }
 
@@ -50,8 +51,12 @@ ul li {
   margin: 0 10px;
   /* border: 2px solid yellow; */
   cursor: pointer;
+  
 }
-
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 .link {
   display: flex;
 }
@@ -264,34 +269,325 @@ font-size: 15px;
     
 }
 .gif{
- display: flex;
-  justify-content: center;
+ display: grid;
+grid-template-columns: repeat(6, 0.2fr);
+grid-template-rows: repeat(5, 1fr);
+  /* justify-content: center; */
   /* border: 2px solid red; */
-  align-items: top;
-  padding: 10px 210px 10px 210px;
+  /* align-items: top; */
+  /* padding: 10px 210px 10px 210px; */
   gap: 20px;
+  /* border: 2px solid black; */
+  padding-top: 50px;
 }
 .gifchild1{
+  grid-area: 1 / 2 / 5 / 4;
   border: 1px solid rgba(3, 1, 1, 0.1);
+  /* border: 2px solid red; */
   border-radius: 30px;
   padding: 30px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   
 }
 .gifchild2{
   border: 1px solid rgba(3, 1, 1, 0.1);
-  justify-content: top;
+  /* border: 2px solid blue; */
+  grid-area: 1 / 4 / 5 / 6;
+  /* justify-content: top; */
   border-radius: 30px;
     padding: 30px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 
 }
 .childgif1 , .childgif11{
   color: #0c8c5e;
-  font-size: 15px;
+  
+  font-size: 12px;
 }
 .childgif2 , .childgif22{
   color: #1d1d1d;
-  line-height: 2;
-  font-size: 30px;
+  line-height: 3;
+  font-size: 22px;
 }
+.childgif4,.childgif44{
+  display: flex;
+  justify-content: center;
+}
+.childgif3,.childgif33{
+font-size: 15px;
+width: 380px;
+font-weight: 330;
+}
+.assistant{
+  display: flex;
+  /* border: 2px solid rebeccapurple; */
+  justify-content: center;
+  
+}
+.assmain{
+  border: 1px solid rgba(3, 1, 1, 0.1);
+  border-radius: 30px;
+}
+.assis,.int,.turn{
+  text-align: center;
+}
+.assis{
+  color: #0c8c5e;
+  padding-top: 20px;
+  font-size: 12px;
+}
+.int{
+  padding-top: 15px;
+  font-size: 27px;
+  font-weight: 500;
+}
+.turn{
+  padding-top: 10px;
+  font-size: 17px;
+}
+.assimg{
+  padding-top: 30px;
+  
+}
+.enterprise{
+  background-color: lab(2.42579% -.165291 -.470081/.03);
+  display: flex;
+  /* border: 2px solid rebeccapurple; */
+  justify-content: center;
+  margin-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* border: 2px solid black; */
+  /* border: 2px solid red; */
+}
+
+.ent1child{
+color: #0c8c5e;
+  
+  font-size: 12px;
+}
+.ent2child{
+font-size: 45px;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.ent3child{
+  padding-top: 10px;
+font-size: 17px;
+}
+.modern{
+  padding-right: 100px;
+  
+}
+.explore{
+  background: #252424;
+  backdrop-filter: blur(0px); /* blur behind the button */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.express{
+    background-color: lab(2.42579% -.165291 -.470081/.03);
+
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+  padding: 20px;
+  gap: 25px;
+}
+.exch1{
+  /* border: 2px solid red; */
+  
+}
+.exch2{
+  /* border: 2px solid red; */
+}
+.exch12{
+  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.exch13{
+  padding-top: 10px;
+  font-size: 16px;
+}
+.exch22{
+  padding-top: 12px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.exch23{
+  padding-top: 10px;
+  font-size: 16px;
+}
+ .story-card {
+      position: relative;
+            /* match enterprise background tint for consistent look */
+            background-color: lab(2.42579% -.165291 -.470081/.03);
+      /* make width responsive and center horizontally */
+      width: min(900px, 90%);
+      margin: 60px auto; /* centers the card horizontally */
+      height: 450px;
+      border-radius: 24px;
+      overflow: hidden;
+      
+      /* 1. Set the image as background (use relative path) */
+      background-image: url('src/anthropic.svg');
+      background-size: cover;
+      background-position: center;
+            
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px;
+      box-sizing: border-box;
+      color: #ffffff;
+    }
+
+/* Optional hero-logo helper class: applies the same subtle tint used by .enterprise */
+.hero-logo ,.storybg{
+  background-color: lab(2.42579% -.165291 -.470081/.03);
+}
+.storybg{
+  border: 0.01px solid rgb(8 9 10 / 0.03);;
+  margin: 0;
+}
+
+        /* 2. Add a Gradient Overlay so text is readable */
+    .story-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* Dark on the left, transparent on the right */
+      z-index: 1;
+      /* softened left shading so top/bottom/left feel lighter */
+      background: linear-gradient(to right, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+      transition: background 180ms ease, opacity 180ms ease;
+    }
+
+      /* Slightly darken the overlay on hover to give a subtle shade effect */
+    .story-card:hover::before{
+      /* slightly stronger on hover, but still softened compared to before */
+      background: linear-gradient(to right, rgba(0,0,0,0.75) 35%, rgba(0,0,0,0) 100%);
+    }
+
+    /* Add a radial dark spot at the bottom-right on hover */
+    .story-card::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 220ms ease;
+      /* softer, less intrusive radial spot near right-bottom */
+      background: radial-gradient(circle at 85% 75%, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 60%);
+    }
+
+    .story-card:hover::after{
+      opacity: 1;
+    }
+
+        /* 3. Ensure content sits on top of the overlay */
+        .card-content, .card-footer {
+            position: relative;
+            z-index: 2;
+            max-width: 500px;
+        }
+
+        /* --- Text Styles --- */
+        .label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #a1a1aa; /* Light gray */
+        }
+
+        .headline {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 30px;
+        }
+
+        .read-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding-bottom: 45px;
+        }
+
+        .read-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Stats Section at Bottom --- */
+        .card-footer {
+            display: flex;
+            gap: 60px;
+        }
+
+        .stat-item h2 {
+            font-size: 36px;
+            font-weight: 500;
+            margin: 0 0 10px 0;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #d1d5db;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+.herologo{
+  background-color: lab(2.42579% -.165291 -.470081/.03);
+  display: flex;
+  /* border: 2px solid red; */
+  padding-top: 20px;
+  padding-bottom: 40px;
+  justify-content: center;
+}
+.herologoparent{
+  /* border: 2px solid blue; */
+  display: flex;
+  gap: 80px;
+}
+.customers{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  /* border: 2px solid red; */
+  
+}
+.cuchild1{
+  color: #0c8c5e;
+  font-size: 12px;
+}
+.cuchild2{
+  font-size: 35px;
+  font-weight: 600;
+}
+.cuchild3{
+  padding-top: 10px;
+  font-size: 17px;
+  width: 620px;
+  text-align: center;}
